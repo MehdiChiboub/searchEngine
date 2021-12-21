@@ -2,8 +2,8 @@
 
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: "Roboto";
-    src: local("Roboto"), url(assets/fonts/Roboto-Regular.ttf) format("truetype");
+    font-family: "Averta";
+    src: local("Averta"), url(assets/fonts/Averta-Regular.otf) format("truetype");
     font-display: swap;
   }
 
@@ -12,9 +12,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Averta", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -33,4 +34,8 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
