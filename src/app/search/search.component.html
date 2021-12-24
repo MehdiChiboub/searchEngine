@@ -25,7 +25,7 @@
           </ng-template>
           <input class="form-control" style="display:none;" id="files" type="file" (change)="readUrl($event)">
         </div>
-        <button class="btn upload-btn" (click)="onSubmit()">Upload</button>
+        <button class="btn upload-btn" (click)="onSubmit()" [disabled]="!file">Upload</button>
       </div>
     </div>
   </section>
