@@ -2,14 +2,13 @@
 
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: "Averta";
-    src: local("Averta"), url(assets/fonts/Averta-Regular.otf) format("truetype");
-    font-display: swap;
-  }
+  font-family: "Averta";
+  src: local("Averta"), url(assets/fonts/Averta-Regular.otf) format("truetype");
+  font-display: swap;
+}
 
-
-  /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
 
 * {
   font-family: "Averta", sans-serif;
@@ -39,3 +38,12 @@ ul {
 ::-webkit-scrollbar {
   display: none;
 }
+
+// .navbar-default,
+// .nav,
+// nav,
+// header {
+//   border: 0;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+// }

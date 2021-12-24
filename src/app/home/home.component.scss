@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fafafa;
 
     .hero-title {
       color: rgb(206, 200, 200);
@@ -86,12 +87,13 @@
       background-image: url("/assets/images/feature-img.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      background-color: #fafafa;
       border-radius: 2px;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       -ms-border-radius: 2px;
       -o-border-radius: 2px;
-}
+    }
 
     .feature-content {
       .feature-header {
