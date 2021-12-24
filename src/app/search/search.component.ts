@@ -11,6 +11,7 @@ export class SearchComponent implements OnInit {
   image: string;
   images = [];
   file: File;
+  isOptimized = false;
 
 
   constructor(private searchService: SearchService) { }
@@ -26,12 +27,27 @@ export class SearchComponent implements OnInit {
       .uploadFile(formData)
       .then((res: any) => {
         this.images = res.split('/');
-        console.log(this.images);
+        this.isOptimized = false;
       })
       .catch((err: any) => {
         console.log(err);
       });
     this.isOpened = ! this.isOpened;
+  }
+
+  // Send the uploaded image to the server and catch the optimized resulting images
+  optimiseResult(): void {
+    const formData = new FormData();
+    formData.append('image', this.file);
+    this.searchService
+      .uploadNormalizeFile(formData)
+      .then((res: any) => {
+        this.images = res.split('/');
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+    this.isOptimized = true;
   }
 
    // FileUpload

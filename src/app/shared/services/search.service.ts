@@ -14,4 +14,10 @@ export class SearchService {
       .toPromise();
   }
 
+  uploadNormalizeFile(img: FormData): any {
+    return this.http
+      .post(`http://127.0.0.1:5000/uploader-normalize`, img, {responseType: 'text'})
+      .toPromise();
+  }
+
 }
